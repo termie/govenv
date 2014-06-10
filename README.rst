@@ -19,4 +19,4 @@ Now, whenever you activate that it will set your ``GOPATH`` and ``PATH``,
 and return it to its previous setting when you deactive.
 
 It's extremely simple, you should just look at the source:
-`gopath.py <tree/master/govenv/gopath.py>`
+`gopath.py <tree/master/govenv/gopath.py>`_
