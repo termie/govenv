@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
   name='govenv',
-  version='0.1.2',
+  version='0.1.3',
   description='Golang Enhancements to virtualenv',
   url='https://github.com/termie/govenv',
   packages=['govenv'],
