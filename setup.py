@@ -10,9 +10,8 @@ def read(fname):
 
 setup(
   name='govenv',
-  version='0.1.1',
+  version='0.1.2',
   description='Golang Enhancements to virtualenv',
-  long_description=read('README.rst'),
   url='https://github.com/termie/govenv',
   packages=['govenv'],
   author='Andy Smith',
