@@ -18,5 +18,12 @@ a ``gopath`` directory in your venv folder to hold all your golang source.
 Now, whenever you activate that it will set your ``GOPATH`` and ``PATH``,
 and return it to its previous setting when you deactive.
 
+We also add an alias, if you don't have it:
+
+  $ gohere
+
+Which will add your current working dir to the end of the ``GOPATH`` (useful
+for testing local code during development.
+
 It's extremely simple, you should just look at the source:
 `gopath.py <https://github.com/termie/govenv/tree/master/govenv/gopath.py>`_
