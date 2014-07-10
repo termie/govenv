@@ -10,15 +10,15 @@ def read(fname):
 
 setup(
   name='govenv',
-  version='0.1.3',
+  version='0.2',
   description='Golang Enhancements to virtualenv',
   url='https://github.com/termie/govenv',
   packages=['govenv'],
   author='Andy Smith',
   author_email='github@anarkystic.com',
   entry_points={
-    'virtualenvwrapper.post_mkvirtualenv': [
-      'gopath = govenv.gopath:post_mkvirtualenv',
+    'virtualenvwrapper.post_mkvirtualenv_source': [
+      'gopath = govenv.gopath:post_mkvirtualenv_source',
       ],
     'virtualenvwrapper.post_activate_source': [
       'gopath = govenv.gopath:post_activate_source',

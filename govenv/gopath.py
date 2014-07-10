@@ -1,9 +1,10 @@
-
 import os
 
-def post_mkvirtualenv(path):
+def post_mkvirtualenv_source(path):
   virtual_env = os.environ.get('VIRTUAL_ENV')
-  os.mkdir(os.path.join(virtual_env, 'gopath'))
+  gopath = os.path.join(virtual_env, 'gopath')
+  os.mkdir(gopath)
+  return post_activate_source(None)
 
 
 def post_activate_source(args):
@@ -17,6 +18,8 @@ if [ -d "%(gopath)s" ]; then
   export OLD_GOPATH=$GOPATH
   export GOPATH=%(gopath)s
   export PATH=%(gopath)s/bin:$PATH
+
+  [ -z "`alias gohere`" ] && alias gohere="export GOPATH=\\$GOPATH:\\`pwd\\`"
 fi
 
 """ % locals()
